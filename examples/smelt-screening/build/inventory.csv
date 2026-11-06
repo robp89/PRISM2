@@ -1,0 +1,8 @@
+grade,key,name,category,unit,value,p5,p50,p95,driver
+mid,black_mass,Black mass (dry),Product,kg,1,1,1,1,
+mid,flux,Slag flux (limestone and silica),Material Input,kg,0.4,0.386557,0.400393,0.413842,flux_kg_per_kg
+mid,electricity,Electricity,Energy Input,kWh,1.2,1.1628,1.20102,1.23694,electricity_kwh_per_kg
+mid,alloy,Ni-Co-Cu alloy,Co-product,kg,0.248732,0.233521,0.248685,0.26429,ni_pct
+mid,li_slag,Lithium reporting to slag,Co-product,kg,0.03388,0.0310384,0.0339193,0.0366687,li_pct
+mid,slag,Slag,Waste,kg,0.801267,0.766057,0.800002,0.836147,graphite_pct
+mid,co2,Carbon dioxide (graphite oxidation),Emission to Air,kg,1.21828,1.1251,1.22521,1.32039,graphite_pct

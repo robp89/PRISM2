@@ -1,0 +1,32 @@
+{
+ "level": "Demo",
+ "headline": "Invented data: shows the workflow, proves nothing",
+ "next_action": "replace with real runs",
+ "questions": [
+  {
+   "q": "Is the data usable?",
+   "a": "caveats",
+   "why": "93 runs read; 35 warning(s)",
+   "fix": null
+  },
+  {
+   "q": "Does it cover the operating range?",
+   "a": "caveats",
+   "why": "80% of the window covered; gaps in h2so4_molarity, pulp_density_g_l",
+   "fix": "generate a run sheet with `prism design`"
+  },
+  {
+   "q": "Does it balance?",
+   "a": "yes",
+   "why": "92 runs close, 0 fail, 0 not checked",
+   "fix": null
+  },
+  {
+   "q": "Is the fitted model accurate?",
+   "a": "yes",
+   "why": "lowest held-out R\u00b2 0.991 (gate 0.92)",
+   "fix": null
+  }
+ ],
+ "tier": "D"
+}

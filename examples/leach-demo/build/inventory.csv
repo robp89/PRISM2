@@ -1,0 +1,34 @@
+grade,key,name,category,unit,value,p5,p50,p95,driver
+low,black_mass,Black mass (dry),Product,kg,1,1,1,1,
+low,h2so4,Sulfuric acid (100% basis),Material Input,kg,1.96144,1.87007,1.96145,2.05163,pulp_density_g_l
+low,h2o2,Hydrogen peroxide (100% basis),Material Input,kg,0.0666,0.0634936,0.0665267,0.0697718,h2o2_vol_pct
+low,water,Process water,Material Input,m3,0.01,0.00966809,0.00998645,0.0103418,pulp_density_g_l
+low,heat,Process heat,Energy Input,MJ,2.54925,2.39238,2.54306,2.71648,temperature_c
+low,ni_liquor,Nickel to pregnant leach solution,Co-product,kg,0.115208,0.104969,0.115181,0.125304,ni_pct
+low,co_liquor,Cobalt to pregnant leach solution,Co-product,kg,0.0288419,0.0264971,0.0288645,0.0313807,co_pct
+low,li_liquor,Lithium to pregnant leach solution,Co-product,kg,0.0230319,0.0211348,0.0230425,0.0249629,li_pct
+low,mn_liquor,Manganese to pregnant leach solution,Co-product,kg,0.0379663,0.0347467,0.0380044,0.0411949,mn_pct
+low,residue,Leach residue (by difference),Waste,kg,0.794952,0.783877,0.794865,0.806001,ni_pct
+low,o2,Oxygen from peroxide decomposition (upper bound),Emission to Air,kg,0.0313263,0.0298652,0.0312919,0.0328182,h2o2_vol_pct
+mid,black_mass,Black mass (dry),Product,kg,1,1,1,1,
+mid,h2so4,Sulfuric acid (100% basis),Material Input,kg,1.96144,1.87639,1.96257,2.06054,h2so4_molarity
+mid,h2o2,Hydrogen peroxide (100% basis),Material Input,kg,0.0666,0.063638,0.0666233,0.069899,h2o2_vol_pct
+mid,water,Process water,Material Input,m3,0.01,0.00969526,0.0100086,0.0103448,pulp_density_g_l
+mid,heat,Process heat,Energy Input,MJ,2.54925,2.39228,2.55236,2.70297,temperature_c
+mid,ni_liquor,Nickel to pregnant leach solution,Co-product,kg,0.172877,0.1589,0.172672,0.18763,ni_pct
+mid,co_liquor,Cobalt to pregnant leach solution,Co-product,kg,0.057784,0.0528555,0.0578841,0.0623472,co_pct
+mid,li_liquor,Lithium to pregnant leach solution,Co-product,kg,0.0323123,0.0295313,0.0322188,0.0349176,li_pct
+mid,mn_liquor,Manganese to pregnant leach solution,Co-product,kg,0.0569556,0.0523442,0.056743,0.0614496,mn_pct
+mid,residue,Leach residue (by difference),Waste,kg,0.680071,0.662381,0.680378,0.696461,ni_pct
+mid,o2,Oxygen from peroxide decomposition (upper bound),Emission to Air,kg,0.0313263,0.0299331,0.0313373,0.0328781,h2o2_vol_pct
+high,black_mass,Black mass (dry),Product,kg,1,1,1,1,
+high,h2so4,Sulfuric acid (100% basis),Material Input,kg,1.96144,1.87144,1.96515,2.05214,h2so4_molarity
+high,h2o2,Hydrogen peroxide (100% basis),Material Input,kg,0.0666,0.0635365,0.0666597,0.069596,h2o2_vol_pct
+high,water,Process water,Material Input,m3,0.01,0.00968293,0.0100051,0.0103297,pulp_density_g_l
+high,heat,Process heat,Energy Input,MJ,2.54925,2.40779,2.55034,2.70559,temperature_c
+high,ni_liquor,Nickel to pregnant leach solution,Co-product,kg,0.230649,0.211464,0.230114,0.249592,ni_pct
+high,co_liquor,Cobalt to pregnant leach solution,Co-product,kg,0.0771626,0.0705364,0.077323,0.083621,co_pct
+high,li_liquor,Lithium to pregnant leach solution,Co-product,kg,0.0416133,0.0380878,0.0414826,0.0450604,li_pct
+high,mn_liquor,Manganese to pregnant leach solution,Co-product,kg,0.0759273,0.0693901,0.076117,0.0822092,mn_pct
+high,residue,Leach residue (by difference),Waste,kg,0.574647,0.552771,0.57494,0.597258,ni_pct
+high,o2,Oxygen from peroxide decomposition (upper bound),Emission to Air,kg,0.0313263,0.0298854,0.0313544,0.0327355,h2o2_vol_pct

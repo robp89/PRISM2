@@ -1,0 +1,46 @@
+# PLACEHOLDER process type for the rare earth element refining module (WP3 T3.4).
+# Written to show REE-1 is configuration only. All values unreviewed (docs/ASSUMPTIONS.md A-13).
+schema: prism2/process-type/v1
+id: ree-ndfeb-leach-v1
+version: 0.1.0
+title: NdFeB magnet swarf leach (rare earth refining) - placeholder
+route_family: hydrometallurgy
+wp: WP3 T3.4
+status: draft
+placeholder: true
+owners: {process_data: Irdanto S. L., thermodynamics: Sahin A.}
+reviews: []
+functional_unit: {amount: 1, unit: kg, of: dry NdFeB swarf fed to the leach}
+boundary: gate-to-gate, oxidative roast is outside; HCl leach and filtration only
+fields:
+  nd_pct: {group: composition, label: Neodymium, unit: wt%, min: 0, max: 100, required: true, element: Nd}
+  pr_pct: {group: composition, label: Praseodymium, unit: wt%, min: 0, max: 100, default: 5, element: Pr}
+  dy_pct: {group: composition, label: Dysprosium, unit: wt%, min: 0, max: 100, default: 1, element: Dy}
+  fe_pct: {group: composition, label: Iron, unit: wt%, min: 0, max: 100, required: true, element: Fe}
+  temperature_c: {group: conditions, label: Leach temperature, unit: degC, min: 20, max: 95, required: true}
+  hcl_molarity: {group: conditions, label: HCl concentration, unit: mol/L, min: 0.5, max: 6, required: true}
+  liquid_solid_l_per_kg: {group: conditions, label: Liquid to solid ratio, unit: L/kg, min: 5, max: 50, default: 20}
+outputs:
+  ree_recovery_pct: {label: REE leaching recovery, unit: '%', min: 0, max: 100}
+  fe_dissolution_pct: {label: Fe co-dissolution, unit: '%', min: 0, max: 100, element: Fe}
+rules:
+  - {id: R1, check: composition_closure, title: Composition adds up, params: {max_sum_pct: 100.5}}
+  - {id: R2, check: operating_window, title: Inside the operating window, params: {fields: [temperature_c, hcl_molarity, liquid_solid_l_per_kg]}}
+  - {id: R6, check: output_bounds, title: Outputs plausible, params: {}}
+constants:
+  hcl_kg_per_mol: {value: 0.036458, provenance: given, source: molar mass}
+derived:
+  hcl_kg: hcl_molarity * liquid_solid_l_per_kg * hcl_kg_per_mol
+  ree_kg: (nd_pct + pr_pct + dy_pct) / 100 * ree_recovery_pct / 100
+  fe_kg: fe_pct / 100 * fe_dissolution_pct / 100
+  residue_kg: 1 - ree_kg - fe_kg
+exchanges:
+  - {key: swarf, name: NdFeB swarf (dry), category: Product, flow: reference, unit: kg, formula: '1'}
+  - {key: hcl, name: Hydrochloric acid (100% basis), category: Material Input, unit: kg, formula: hcl_kg, assumption: A-13}
+  - {key: water, name: Process water, category: Material Input, unit: L, formula: liquid_solid_l_per_kg, assumption: A-13}
+  - {key: ree, name: Rare earths to leach solution, category: Co-product, unit: kg, formula: ree_kg}
+  - {key: fe, name: Iron to leach solution, category: Co-product, unit: kg, formula: fe_kg}
+  - {key: residue, name: Leach residue (by difference), category: Waste, unit: kg, formula: residue_kg, assumption: A-13}
+examples:
+  default_point: {nd_pct: 23, pr_pct: 5, dy_pct: 1, fe_pct: 65, temperature_c: 80, hcl_molarity: 3,
+                  liquid_solid_l_per_kg: 20, ree_recovery_pct: 95, fe_dissolution_pct: 60}

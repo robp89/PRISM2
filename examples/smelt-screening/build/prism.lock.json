@@ -1,0 +1,13 @@
+{
+ "prism_version": "0.1.0",
+ "built_at": "2026-11-06T13:43:26+00:00",
+ "demo": false,
+ "inputs": {
+  "prism.yaml": "62e0b4f99f1953962f525d1fca9e07d3b4fedb554a7ee7677451ab82361a2ace",
+  "scope.yaml": "7ae696a71b3911ba1c53b10cf9e69eba460cc01ab89bd36752dc3eba3c674d39",
+  "feedstocks.yaml": "ccd7c051a1af1b932e03da047a96dad5eef0e8967976c3f077d35508fd6c6a12",
+  "signoffs.yaml": "55b615c8a11920a3bcc0195010374eb49f2d37051f97ba7e6202de4a139da7a4",
+  "library/pyro-smelt-v1.yaml": "bde8be03eebd31ac487ab1c5b9039dbf243c670fedbfad47329abc8b85f54717",
+  "data/runs.csv": "b262178f836acb0dcc6dd6178e43ce7058085a3896e6ed3617dce7c798e2ef07"
+ }
+}

@@ -1,0 +1,518 @@
+{
+ "functional_unit": {
+  "amount": 1,
+  "unit": "kg",
+  "of": "dry black mass fed to the leach"
+ },
+ "grades": {
+  "low": {
+   "inputs": {
+    "al_pct": 3.0,
+    "co_pct": 3.0,
+    "co_recovery_pct": 96.13966906349003,
+    "cu_pct": 2.0,
+    "graphite_pct": 40.0,
+    "h2o2_vol_pct": 2.0,
+    "h2so4_molarity": 2.0,
+    "li_pct": 2.5,
+    "li_recovery_pct": 92.12752719850886,
+    "mn_pct": 4.0,
+    "mn_recovery_pct": 94.91575552740407,
+    "ni_pct": 12.0,
+    "ni_recovery_pct": 96.00688370737113,
+    "pulp_density_g_l": 100.0,
+    "residence_time_min": 120.0,
+    "temperature_c": 65.0
+   },
+   "exchanges": {
+    "black_mass": {
+     "value": 1.0,
+     "p5": 1.0,
+     "p50": 1.0,
+     "p95": 1.0,
+     "driver": null,
+     "driver_rho": 0.0
+    },
+    "h2so4": {
+     "value": 1.96144,
+     "p5": 1.8700672819557735,
+     "p50": 1.9614483434432988,
+     "p95": 2.051631342645538,
+     "driver": "pulp_density_g_l",
+     "driver_rho": -0.6981148221148222
+    },
+    "h2o2": {
+     "value": 0.0666,
+     "p5": 0.06349360489880472,
+     "p50": 0.06652674962304082,
+     "p95": 0.06977182709238747,
+     "driver": "h2o2_vol_pct",
+     "driver_rho": 0.6935413775413776
+    },
+    "water": {
+     "value": 0.01,
+     "p5": 0.009668091878475052,
+     "p50": 0.009986449685941774,
+     "p95": 0.01034181892850005,
+     "driver": "pulp_density_g_l",
+     "driver_rho": -1.0
+    },
+    "heat": {
+     "value": 2.549253731343283,
+     "p5": 2.392378424859583,
+     "p50": 2.5430648121179806,
+     "p95": 2.7164810510275936,
+     "driver": "temperature_c",
+     "driver_rho": 0.8394791754791756
+    },
+    "ni_liquor": {
+     "value": 0.11520826044884534,
+     "p5": 0.10496900629404393,
+     "p50": 0.115180732041728,
+     "p95": 0.12530434603673893,
+     "driver": "ni_pct",
+     "driver_rho": 0.9609547449547451
+    },
+    "co_liquor": {
+     "value": 0.028841900719047006,
+     "p5": 0.02649706302532593,
+     "p50": 0.028864500923186428,
+     "p95": 0.03138071701948957,
+     "driver": "co_pct",
+     "driver_rho": 0.9749606909606909
+    },
+    "li_liquor": {
+     "value": 0.023031881799627216,
+     "p5": 0.021134775991790717,
+     "p50": 0.023042516727033543,
+     "p95": 0.024962876750881796,
+     "driver": "li_pct",
+     "driver_rho": 0.9757170757170758
+    },
+    "mn_liquor": {
+     "value": 0.03796630221096163,
+     "p5": 0.034746748199128576,
+     "p50": 0.03800443637342478,
+     "p95": 0.041194940942317855,
+     "driver": "mn_pct",
+     "driver_rho": 0.983118191118191
+    },
+    "residue": {
+     "value": 0.7949516548215187,
+     "p5": 0.783876737656531,
+     "p50": 0.7948646646600613,
+     "p95": 0.8060006239344802,
+     "driver": "ni_pct",
+     "driver_rho": -0.8502649062649063
+    },
+    "o2": {
+     "value": 0.03132631857470453,
+     "p5": 0.029865178596341996,
+     "p50": 0.031291864150615335,
+     "p95": 0.03281823548101096,
+     "driver": "h2o2_vol_pct",
+     "driver_rho": 0.6935413775413776
+    }
+   },
+   "warnings": []
+  },
+  "mid": {
+   "inputs": {
+    "al_pct": 2.0,
+    "co_pct": 6.0,
+    "co_recovery_pct": 96.30674075304569,
+    "cu_pct": 1.5,
+    "graphite_pct": 35.0,
+    "h2o2_vol_pct": 2.0,
+    "h2so4_molarity": 2.0,
+    "li_pct": 3.5,
+    "li_recovery_pct": 92.32087444699098,
+    "mn_pct": 6.0,
+    "mn_recovery_pct": 94.92606039670585,
+    "ni_pct": 18.0,
+    "ni_recovery_pct": 96.04250904784607,
+    "pulp_density_g_l": 100.0,
+    "residence_time_min": 120.0,
+    "temperature_c": 65.0
+   },
+   "exchanges": {
+    "black_mass": {
+     "value": 1.0,
+     "p5": 1.0,
+     "p50": 1.0,
+     "p95": 1.0,
+     "driver": null,
+     "driver_rho": 0.0
+    },
+    "h2so4": {
+     "value": 1.96144,
+     "p5": 1.8763873213543365,
+     "p50": 1.9625722482469357,
+     "p95": 2.0605409145292746,
+     "driver": "h2so4_molarity",
+     "driver_rho": 0.7094244734244735
+    },
+    "h2o2": {
+     "value": 0.0666,
+     "p5": 0.06363795260233839,
+     "p50": 0.06662332627604901,
+     "p95": 0.06989900163371913,
+     "driver": "h2o2_vol_pct",
+     "driver_rho": 0.7331187011187013
+    },
+    "water": {
+     "value": 0.01,
+     "p5": 0.009695259689089648,
+     "p50": 0.010008575663037934,
+     "p95": 0.010344750527631414,
+     "driver": "pulp_density_g_l",
+     "driver_rho": -1.0
+    },
+    "heat": {
+     "value": 2.549253731343283,
+     "p5": 2.3922845851443086,
+     "p50": 2.5523605716111244,
+     "p95": 2.7029705842030842,
+     "driver": "temperature_c",
+     "driver_rho": 0.8530422610422611
+    },
+    "ni_liquor": {
+     "value": 0.1728765162861229,
+     "p5": 0.15889962819592376,
+     "p50": 0.17267194949991393,
+     "p95": 0.18762953932907417,
+     "driver": "ni_pct",
+     "driver_rho": 0.9588364428364429
+    },
+    "co_liquor": {
+     "value": 0.057784044451827415,
+     "p5": 0.05285550845768913,
+     "p50": 0.05788407314600784,
+     "p95": 0.06234721404558958,
+     "driver": "co_pct",
+     "driver_rho": 0.9707431907431908
+    },
+    "li_liquor": {
+     "value": 0.032312306056446846,
+     "p5": 0.029531341324895745,
+     "p50": 0.03221882968486611,
+     "p95": 0.03491761283449414,
+     "driver": "li_pct",
+     "driver_rho": 0.9721231921231922
+    },
+    "mn_liquor": {
+     "value": 0.05695563623802351,
+     "p5": 0.05234420142567159,
+     "p50": 0.05674296487101607,
+     "p95": 0.06144962898898312,
+     "driver": "mn_pct",
+     "driver_rho": 0.9802526362526363
+    },
+    "residue": {
+     "value": 0.6800714969675793,
+     "p5": 0.6623813480474056,
+     "p50": 0.6803776743884277,
+     "p95": 0.6964606009199127,
+     "driver": "ni_pct",
+     "driver_rho": -0.8561308241308243
+    },
+    "o2": {
+     "value": 0.03132631857470453,
+     "p5": 0.029933074724666657,
+     "p50": 0.03133729044189181,
+     "p95": 0.0328780539524276,
+     "driver": "h2o2_vol_pct",
+     "driver_rho": 0.7331187011187013
+    }
+   },
+   "warnings": []
+  },
+  "high": {
+   "inputs": {
+    "al_pct": 1.0,
+    "co_pct": 8.0,
+    "co_recovery_pct": 96.45324043396951,
+    "cu_pct": 1.0,
+    "graphite_pct": 30.0,
+    "h2o2_vol_pct": 2.0,
+    "h2so4_molarity": 2.0,
+    "li_pct": 4.5,
+    "li_recovery_pct": 92.47399464822364,
+    "mn_pct": 8.0,
+    "mn_recovery_pct": 94.90916212262306,
+    "ni_pct": 24.0,
+    "ni_recovery_pct": 96.10394611185491,
+    "pulp_density_g_l": 100.0,
+    "residence_time_min": 120.0,
+    "temperature_c": 65.0
+   },
+   "exchanges": {
+    "black_mass": {
+     "value": 1.0,
+     "p5": 1.0,
+     "p50": 1.0,
+     "p95": 1.0,
+     "driver": null,
+     "driver_rho": 0.0
+    },
+    "h2so4": {
+     "value": 1.96144,
+     "p5": 1.8714418363463736,
+     "p50": 1.9651471295979093,
+     "p95": 2.052138715202614,
+     "driver": "h2so4_molarity",
+     "driver_rho": 0.6812230292230294
+    },
+    "h2o2": {
+     "value": 0.0666,
+     "p5": 0.06353650126590717,
+     "p50": 0.0666597116592019,
+     "p95": 0.06959603368953327,
+     "driver": "h2o2_vol_pct",
+     "driver_rho": 0.7103532623532625
+    },
+    "water": {
+     "value": 0.01,
+     "p5": 0.009682929393677568,
+     "p50": 0.010005126647562758,
+     "p95": 0.010329713851349445,
+     "driver": "pulp_density_g_l",
+     "driver_rho": -1.0
+    },
+    "heat": {
+     "value": 2.549253731343283,
+     "p5": 2.4077933281783803,
+     "p50": 2.5503433315471806,
+     "p95": 2.705585048178114,
+     "driver": "temperature_c",
+     "driver_rho": 0.8371500211500212
+    },
+    "ni_liquor": {
+     "value": 0.2306494706684518,
+     "p5": 0.2114635766010768,
+     "p50": 0.23011392397055785,
+     "p95": 0.24959156285765624,
+     "driver": "ni_pct",
+     "driver_rho": 0.9541371061371062
+    },
+    "co_liquor": {
+     "value": 0.07716259234717561,
+     "p5": 0.07053637619652726,
+     "p50": 0.07732304198744223,
+     "p95": 0.08362098083346094,
+     "driver": "co_pct",
+     "driver_rho": 0.9754757554757556
+    },
+    "li_liquor": {
+     "value": 0.04161329759170064,
+     "p5": 0.038087848035632546,
+     "p50": 0.04148262718781196,
+     "p95": 0.0450604053175653,
+     "driver": "li_pct",
+     "driver_rho": 0.972941112941113
+    },
+    "mn_liquor": {
+     "value": 0.07592732969809844,
+     "p5": 0.0693901000733554,
+     "p50": 0.07611700954436526,
+     "p95": 0.08220923702608958,
+     "driver": "mn_pct",
+     "driver_rho": 0.9818576618576618
+    },
+    "residue": {
+     "value": 0.5746473096945734,
+     "p5": 0.5527711106507682,
+     "p50": 0.5749401012619577,
+     "p95": 0.5972581008144007,
+     "driver": "ni_pct",
+     "driver_rho": -0.8432343872343874
+    },
+    "o2": {
+     "value": 0.03132631857470453,
+     "p5": 0.029885355552221105,
+     "p50": 0.03135440485786944,
+     "p95": 0.03273554839180463,
+     "driver": "h2o2_vol_pct",
+     "driver_rho": 0.7103532623532625
+    }
+   },
+   "warnings": []
+  }
+ },
+ "warnings": [],
+ "exchanges": [
+  {
+   "key": "black_mass",
+   "name": "Black mass (dry)",
+   "category": "Product",
+   "unit": "kg",
+   "assumption": null,
+   "flow": "reference",
+   "note": "functional unit (reference flow)"
+  },
+  {
+   "key": "h2so4",
+   "name": "Sulfuric acid (100% basis)",
+   "category": "Material Input",
+   "unit": "kg",
+   "assumption": "A-03",
+   "flow": null,
+   "note": null
+  },
+  {
+   "key": "h2o2",
+   "name": "Hydrogen peroxide (100% basis)",
+   "category": "Material Input",
+   "unit": "kg",
+   "assumption": "A-04",
+   "flow": null,
+   "note": null
+  },
+  {
+   "key": "water",
+   "name": "Process water",
+   "category": "Material Input",
+   "unit": "m3",
+   "assumption": "A-03",
+   "flow": null,
+   "note": null
+  },
+  {
+   "key": "heat",
+   "name": "Process heat",
+   "category": "Energy Input",
+   "unit": "MJ",
+   "assumption": "A-05",
+   "flow": null,
+   "note": null
+  },
+  {
+   "key": "ni_liquor",
+   "name": "Nickel to pregnant leach solution",
+   "category": "Co-product",
+   "unit": "kg",
+   "assumption": null,
+   "flow": null,
+   "note": null
+  },
+  {
+   "key": "co_liquor",
+   "name": "Cobalt to pregnant leach solution",
+   "category": "Co-product",
+   "unit": "kg",
+   "assumption": null,
+   "flow": null,
+   "note": null
+  },
+  {
+   "key": "li_liquor",
+   "name": "Lithium to pregnant leach solution",
+   "category": "Co-product",
+   "unit": "kg",
+   "assumption": null,
+   "flow": null,
+   "note": null
+  },
+  {
+   "key": "mn_liquor",
+   "name": "Manganese to pregnant leach solution",
+   "category": "Co-product",
+   "unit": "kg",
+   "assumption": null,
+   "flow": null,
+   "note": null
+  },
+  {
+   "key": "residue",
+   "name": "Leach residue (by difference)",
+   "category": "Waste",
+   "unit": "kg",
+   "assumption": "A-07",
+   "flow": null,
+   "note": null
+  },
+  {
+   "key": "o2",
+   "name": "Oxygen from peroxide decomposition (upper bound)",
+   "category": "Emission to Air",
+   "unit": "kg",
+   "assumption": "A-04",
+   "flow": null,
+   "note": null
+  }
+ ],
+ "uncertainty": {
+  "composition_rel_sd": 0.05,
+  "conditions_rel_sd": 0.02
+ },
+ "n_mc": 1000,
+ "basis": "model",
+ "envelope": {
+  "black_mass": {
+   "min": 1.0,
+   "max": 1.0,
+   "p5": 1.0,
+   "p95": 1.0
+  },
+  "h2so4": {
+   "min": 1.96144,
+   "max": 1.96144,
+   "p5": 1.8700672819557735,
+   "p95": 2.0605409145292746
+  },
+  "h2o2": {
+   "min": 0.0666,
+   "max": 0.0666,
+   "p5": 0.06349360489880472,
+   "p95": 0.06989900163371913
+  },
+  "water": {
+   "min": 0.01,
+   "max": 0.01,
+   "p5": 0.009668091878475052,
+   "p95": 0.010344750527631414
+  },
+  "heat": {
+   "min": 2.549253731343283,
+   "max": 2.549253731343283,
+   "p5": 2.3922845851443086,
+   "p95": 2.7164810510275936
+  },
+  "ni_liquor": {
+   "min": 0.11520826044884534,
+   "max": 0.2306494706684518,
+   "p5": 0.10496900629404393,
+   "p95": 0.24959156285765624
+  },
+  "co_liquor": {
+   "min": 0.028841900719047006,
+   "max": 0.07716259234717561,
+   "p5": 0.02649706302532593,
+   "p95": 0.08362098083346094
+  },
+  "li_liquor": {
+   "min": 0.023031881799627216,
+   "max": 0.04161329759170064,
+   "p5": 0.021134775991790717,
+   "p95": 0.0450604053175653
+  },
+  "mn_liquor": {
+   "min": 0.03796630221096163,
+   "max": 0.07592732969809844,
+   "p5": 0.034746748199128576,
+   "p95": 0.08220923702608958
+  },
+  "residue": {
+   "min": 0.5746473096945734,
+   "max": 0.7949516548215187,
+   "p5": 0.5527711106507682,
+   "p95": 0.8060006239344802
+  },
+  "o2": {
+   "min": 0.03132631857470453,
+   "max": 0.03132631857470453,
+   "p5": 0.029865178596341996,
+   "p95": 0.0328780539524276
+  }
+ }
+}

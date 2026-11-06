@@ -1,0 +1,24 @@
+[
+ {
+  "id": "type.draft",
+  "severity": "warning",
+  "message": "process type is a draft: results cannot be rated above tier D",
+  "file": "library/pyro-smelt-v1.yaml",
+  "line": 9,
+  "fix": "ask the named owners to review and record it under reviews:",
+  "subject": null,
+  "data": {},
+  "where": "library/pyro-smelt-v1.yaml:9"
+ },
+ {
+  "id": "scope.not-agreed",
+  "severity": "warning",
+  "message": "functional unit and boundary not yet agreed by the LCA practitioner",
+  "file": "scope.yaml",
+  "line": 7,
+  "fix": "add agreed_by: {name: ..., date: ...}",
+  "subject": null,
+  "data": {},
+  "where": "scope.yaml:7"
+ }
+]

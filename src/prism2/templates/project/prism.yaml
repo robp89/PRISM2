@@ -1,0 +1,22 @@
+# PRISM2 model repository manifest. Schema prism2/project/v1 (see the PRISM2 docs, FILE-FORMATS.md).
+schema: prism2/project/v1
+id: {{id}}
+title: {{title}}
+process_type: {{process_type}}
+data:
+  runs: data/runs.csv
+  origin: simulation        # plant | pilot | lab | simulation | literature | synthetic
+  tool: {name: null, version: null}
+  # validation: {status: compared, against: <dataset>, within_tolerance: true}   # simulation checked against measurements
+  # exclude: [{run: <id>, reason: <why>}]
+model:
+  targets: [{{targets}}]
+  families: [polynomial, ann, gp]
+  degree: 2
+gate:
+  min_runs: 20
+  holdout_fraction: 0.2
+  min_holdout_runs: 8
+  min_r2: 0.92
+  max_p90_rel_err_pct: 10
+  min_normality_p: 0.05

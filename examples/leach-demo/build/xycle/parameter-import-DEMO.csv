@@ -1,0 +1,37 @@
+Name,Formula,Unit,Description
+ni_pct,18.0,wt%,input: Nickel
+co_pct,6.0,wt%,input: Cobalt
+li_pct,3.5,wt%,input: Lithium
+mn_pct,6.0,wt%,input: Manganese
+al_pct,2.0,wt%,input: Aluminium
+cu_pct,1.5,wt%,input: Copper
+graphite_pct,35.0,wt%,input: Graphite
+temperature_c,65.0,degC,input: Leach temperature
+h2so4_molarity,2.0,mol/L,input: Sulfuric acid concentration
+residence_time_min,120.0,min,input: Residence time
+h2o2_vol_pct,2.0,vol%,input: Hydrogen peroxide dose
+pulp_density_g_l,100.0,g/L,input: Pulp density
+h2so4_kg_per_mol,0.098072,,constant (molar mass)
+h2o2_kg_per_mol,0.034014,,constant (molar mass)
+o2_kg_per_mol,0.031998,,constant (molar mass)
+h2o2_solution_kg_per_l,1.11,,constant (A-04 (30 wt% solution))
+h2o2_solution_strength,0.3,,constant (A-04)
+cp_liquor_mj_per_kg_k,0.00418,,constant (A-05 (water))
+cp_solids_mj_per_kg_k,0.0009,,constant (A-05)
+heat_efficiency,0.67,,constant (A-06 (sensible heat only))
+ambient_c,25.0,,constant (A-05)
+ni_recovery_pct,96.04250904784607,%,value at the operating point: Ni leaching recovery
+co_recovery_pct,96.30674075304569,%,value at the operating point: Co leaching recovery
+li_recovery_pct,92.32087444699098,%,value at the operating point: Li leaching recovery
+mn_recovery_pct,94.92606039670585,%,value at the operating point: Mn leaching recovery
+liquor_l,1000/{{pulp_density_g_l}},,derived (recipe)
+ni_leached_kg,{{ni_pct}}/100*{{ni_recovery_pct}}/100,,derived (recipe)
+co_leached_kg,{{co_pct}}/100*{{co_recovery_pct}}/100,,derived (recipe)
+li_leached_kg,{{li_pct}}/100*{{li_recovery_pct}}/100,,derived (recipe)
+mn_leached_kg,{{mn_pct}}/100*{{mn_recovery_pct}}/100,,derived (recipe)
+acid_kg,{{h2so4_molarity}}*{{liquor_l}}*{{h2so4_kg_per_mol}},,derived (recipe)
+h2o2_kg,{{h2o2_vol_pct}}/100*{{liquor_l}}*{{h2o2_solution_kg_per_l}}*{{h2o2_solution_strength}},,derived (recipe)
+water_m3,{{liquor_l}}/1000,,derived (recipe)
+heat_mj,({{liquor_l}}*{{cp_liquor_mj_per_kg_k}} + {{cp_solids_mj_per_kg_k}})*({{temperature_c}} - {{ambient_c}})/{{heat_efficiency}},,derived (recipe)
+residue_kg,1 - ({{ni_leached_kg}} + {{co_leached_kg}} + {{li_leached_kg}} + {{mn_leached_kg}}),,derived (recipe)
+o2_kg,{{h2o2_kg}}/{{h2o2_kg_per_mol}}*0.5*{{o2_kg_per_mol}},,derived (recipe)

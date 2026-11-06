@@ -1,0 +1,24 @@
+{
+ "tier": "D",
+ "tier_text": "Screening only: draft process type, too few runs, or the model failed its gate",
+ "reasons": [
+  "process type pyro-smelt-v1 is a draft"
+ ],
+ "raise_by": [
+  "have the process type reviewed by its named owners"
+ ],
+ "gate": {
+  "passed": false,
+  "targets": {},
+  "reason": "no fitted model"
+ },
+ "blockers": [
+  "no fitted model",
+  "process type is a draft"
+ ],
+ "certified": false,
+ "demo": false,
+ "watermark": false,
+ "signoffs": [],
+ "target_tier": "D"
+}

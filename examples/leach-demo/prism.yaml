@@ -1,0 +1,23 @@
+# PRISM2 model repository manifest. Schema prism2/project/v1 (docs/FILE-FORMATS.md).
+schema: prism2/project/v1
+id: leach-demo
+title: Black mass leach, three feedstock grades (worked example)
+process_type: bml-v1
+data:
+  runs: data/runs.csv
+  origin: synthetic          # plant | pilot | lab | simulation | literature | synthetic
+  tool: {name: scripts/generate_samples.py, version: 0.1.0}
+  exclude:                   # runs left out on purpose; the reason travels to the method note
+    - {run: mid-031, reason: temperature logged as 95 degC, above the 90 degC window; awaiting the run sheet}
+    - {run: high-031, reason: nickel balance off by 19%; liquor assay suspected, re-assay requested}
+model:
+  targets: [ni_recovery_pct, co_recovery_pct, li_recovery_pct, mn_recovery_pct]
+  families: [polynomial, ann, gp]
+  degree: 2
+gate:                        # MS3.2 gate; the grant's ANN criterion is min_r2 0.92
+  min_runs: 20
+  holdout_fraction: 0.2
+  min_holdout_runs: 8
+  min_r2: 0.92
+  max_p90_rel_err_pct: 10
+  min_normality_p: 0.05

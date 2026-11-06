@@ -1,0 +1,536 @@
+[
+ {
+  "id": "R6.output-bounds",
+  "severity": "warning",
+  "message": "li_recovery_pct = 82.81 below the expected 85",
+  "file": "data/runs.csv",
+  "line": 2,
+  "fix": "check the assay or the conditions",
+  "subject": "low-001",
+  "data": {
+   "rule": "R6",
+   "title": "Outputs plausible"
+  },
+  "where": "data/runs.csv:2"
+ },
+ {
+  "id": "R3.acid-stoichiometry",
+  "severity": "warning",
+  "message": "acid-to-solid ratio 2.54 g/g outside the usual 1.2 to 2.5",
+  "file": "data/runs.csv",
+  "line": 3,
+  "fix": null,
+  "subject": "low-002",
+  "data": {
+   "rule": "R3",
+   "title": "Enough acid for the metals"
+  },
+  "where": "data/runs.csv:3"
+ },
+ {
+  "id": "R6.output-bounds",
+  "severity": "warning",
+  "message": "li_recovery_pct = 65.44 below the expected 85",
+  "file": "data/runs.csv",
+  "line": 7,
+  "fix": "check the assay or the conditions",
+  "subject": "low-006",
+  "data": {
+   "rule": "R6",
+   "title": "Outputs plausible"
+  },
+  "where": "data/runs.csv:7"
+ },
+ {
+  "id": "R6.output-bounds",
+  "severity": "warning",
+  "message": "li_recovery_pct = 82.53 below the expected 85",
+  "file": "data/runs.csv",
+  "line": 8,
+  "fix": "check the assay or the conditions",
+  "subject": "low-007",
+  "data": {
+   "rule": "R6",
+   "title": "Outputs plausible"
+  },
+  "where": "data/runs.csv:8"
+ },
+ {
+  "id": "R6.output-bounds",
+  "severity": "warning",
+  "message": "li_recovery_pct = 68.71 below the expected 85",
+  "file": "data/runs.csv",
+  "line": 11,
+  "fix": "check the assay or the conditions",
+  "subject": "low-010",
+  "data": {
+   "rule": "R6",
+   "title": "Outputs plausible"
+  },
+  "where": "data/runs.csv:11"
+ },
+ {
+  "id": "R6.output-bounds",
+  "severity": "warning",
+  "message": "li_recovery_pct = 63.98 below the expected 85",
+  "file": "data/runs.csv",
+  "line": 16,
+  "fix": "check the assay or the conditions",
+  "subject": "low-015",
+  "data": {
+   "rule": "R6",
+   "title": "Outputs plausible"
+  },
+  "where": "data/runs.csv:16"
+ },
+ {
+  "id": "R6.output-bounds",
+  "severity": "warning",
+  "message": "li_recovery_pct = 69.29 below the expected 85",
+  "file": "data/runs.csv",
+  "line": 20,
+  "fix": "check the assay or the conditions",
+  "subject": "low-019",
+  "data": {
+   "rule": "R6",
+   "title": "Outputs plausible"
+  },
+  "where": "data/runs.csv:20"
+ },
+ {
+  "id": "R3.acid-stoichiometry",
+  "severity": "warning",
+  "message": "acid-to-solid ratio 2.71 g/g outside the usual 1.2 to 2.5",
+  "file": "data/runs.csv",
+  "line": 23,
+  "fix": null,
+  "subject": "low-022",
+  "data": {
+   "rule": "R3",
+   "title": "Enough acid for the metals"
+  },
+  "where": "data/runs.csv:23"
+ },
+ {
+  "id": "R6.output-bounds",
+  "severity": "warning",
+  "message": "li_recovery_pct = 83.41 below the expected 85",
+  "file": "data/runs.csv",
+  "line": 25,
+  "fix": "check the assay or the conditions",
+  "subject": "low-024",
+  "data": {
+   "rule": "R6",
+   "title": "Outputs plausible"
+  },
+  "where": "data/runs.csv:25"
+ },
+ {
+  "id": "R6.output-bounds",
+  "severity": "warning",
+  "message": "li_recovery_pct = 67.06 below the expected 85",
+  "file": "data/runs.csv",
+  "line": 27,
+  "fix": "check the assay or the conditions",
+  "subject": "low-026",
+  "data": {
+   "rule": "R6",
+   "title": "Outputs plausible"
+  },
+  "where": "data/runs.csv:27"
+ },
+ {
+  "id": "R6.output-bounds",
+  "severity": "warning",
+  "message": "li_recovery_pct = 82.15 below the expected 85",
+  "file": "data/runs.csv",
+  "line": 30,
+  "fix": "check the assay or the conditions",
+  "subject": "low-029",
+  "data": {
+   "rule": "R6",
+   "title": "Outputs plausible"
+  },
+  "where": "data/runs.csv:30"
+ },
+ {
+  "id": "R6.output-bounds",
+  "severity": "warning",
+  "message": "li_recovery_pct = 72.55 below the expected 85",
+  "file": "data/runs.csv",
+  "line": 32,
+  "fix": "check the assay or the conditions",
+  "subject": "low-031",
+  "data": {
+   "rule": "R6",
+   "title": "Outputs plausible"
+  },
+  "where": "data/runs.csv:32"
+ },
+ {
+  "id": "R6.output-bounds",
+  "severity": "warning",
+  "message": "li_recovery_pct = 83.83 below the expected 85",
+  "file": "data/runs.csv",
+  "line": 35,
+  "fix": "check the assay or the conditions",
+  "subject": "mid-003",
+  "data": {
+   "rule": "R6",
+   "title": "Outputs plausible"
+  },
+  "where": "data/runs.csv:35"
+ },
+ {
+  "id": "R6.output-bounds",
+  "severity": "warning",
+  "message": "li_recovery_pct = 62.79 below the expected 85",
+  "file": "data/runs.csv",
+  "line": 38,
+  "fix": "check the assay or the conditions",
+  "subject": "mid-006",
+  "data": {
+   "rule": "R6",
+   "title": "Outputs plausible"
+  },
+  "where": "data/runs.csv:38"
+ },
+ {
+  "id": "R6.output-bounds",
+  "severity": "warning",
+  "message": "li_recovery_pct = 78.59 below the expected 85",
+  "file": "data/runs.csv",
+  "line": 42,
+  "fix": "check the assay or the conditions",
+  "subject": "mid-010",
+  "data": {
+   "rule": "R6",
+   "title": "Outputs plausible"
+  },
+  "where": "data/runs.csv:42"
+ },
+ {
+  "id": "R6.output-bounds",
+  "severity": "warning",
+  "message": "li_recovery_pct = 83.67 below the expected 85",
+  "file": "data/runs.csv",
+  "line": 44,
+  "fix": "check the assay or the conditions",
+  "subject": "mid-012",
+  "data": {
+   "rule": "R6",
+   "title": "Outputs plausible"
+  },
+  "where": "data/runs.csv:44"
+ },
+ {
+  "id": "R6.output-bounds",
+  "severity": "warning",
+  "message": "li_recovery_pct = 69.52 below the expected 85",
+  "file": "data/runs.csv",
+  "line": 47,
+  "fix": "check the assay or the conditions",
+  "subject": "mid-015",
+  "data": {
+   "rule": "R6",
+   "title": "Outputs plausible"
+  },
+  "where": "data/runs.csv:47"
+ },
+ {
+  "id": "R6.output-bounds",
+  "severity": "warning",
+  "message": "li_recovery_pct = 66.35 below the expected 85",
+  "file": "data/runs.csv",
+  "line": 51,
+  "fix": "check the assay or the conditions",
+  "subject": "mid-019",
+  "data": {
+   "rule": "R6",
+   "title": "Outputs plausible"
+  },
+  "where": "data/runs.csv:51"
+ },
+ {
+  "id": "R6.output-bounds",
+  "severity": "warning",
+  "message": "li_recovery_pct = 84.86 below the expected 85",
+  "file": "data/runs.csv",
+  "line": 55,
+  "fix": "check the assay or the conditions",
+  "subject": "mid-023",
+  "data": {
+   "rule": "R6",
+   "title": "Outputs plausible"
+  },
+  "where": "data/runs.csv:55"
+ },
+ {
+  "id": "R3.acid-stoichiometry",
+  "severity": "warning",
+  "message": "acid-to-solid ratio 2.68 g/g outside the usual 1.2 to 2.5",
+  "file": "data/runs.csv",
+  "line": 58,
+  "fix": null,
+  "subject": "mid-026",
+  "data": {
+   "rule": "R3",
+   "title": "Enough acid for the metals"
+  },
+  "where": "data/runs.csv:58"
+ },
+ {
+  "id": "R6.output-bounds",
+  "severity": "warning",
+  "message": "li_recovery_pct = 66.9 below the expected 85",
+  "file": "data/runs.csv",
+  "line": 58,
+  "fix": "check the assay or the conditions",
+  "subject": "mid-026",
+  "data": {
+   "rule": "R6",
+   "title": "Outputs plausible"
+  },
+  "where": "data/runs.csv:58"
+ },
+ {
+  "id": "R6.output-bounds",
+  "severity": "warning",
+  "message": "li_recovery_pct = 66.67 below the expected 85",
+  "file": "data/runs.csv",
+  "line": 61,
+  "fix": "check the assay or the conditions",
+  "subject": "mid-029",
+  "data": {
+   "rule": "R6",
+   "title": "Outputs plausible"
+  },
+  "where": "data/runs.csv:61"
+ },
+ {
+  "id": "R6.output-bounds",
+  "severity": "warning",
+  "message": "li_recovery_pct = 45.67 below the expected 85",
+  "file": "data/runs.csv",
+  "line": 65,
+  "fix": "check the assay or the conditions",
+  "subject": "high-002",
+  "data": {
+   "rule": "R6",
+   "title": "Outputs plausible"
+  },
+  "where": "data/runs.csv:65"
+ },
+ {
+  "id": "R6.output-bounds",
+  "severity": "warning",
+  "message": "li_recovery_pct = 84.65 below the expected 85",
+  "file": "data/runs.csv",
+  "line": 68,
+  "fix": "check the assay or the conditions",
+  "subject": "high-005",
+  "data": {
+   "rule": "R6",
+   "title": "Outputs plausible"
+  },
+  "where": "data/runs.csv:68"
+ },
+ {
+  "id": "R6.output-bounds",
+  "severity": "warning",
+  "message": "li_recovery_pct = 74.89 below the expected 85",
+  "file": "data/runs.csv",
+  "line": 70,
+  "fix": "check the assay or the conditions",
+  "subject": "high-007",
+  "data": {
+   "rule": "R6",
+   "title": "Outputs plausible"
+  },
+  "where": "data/runs.csv:70"
+ },
+ {
+  "id": "R3.acid-stoichiometry",
+  "severity": "warning",
+  "message": "acid-to-solid ratio 2.61 g/g outside the usual 1.2 to 2.5",
+  "file": "data/runs.csv",
+  "line": 72,
+  "fix": null,
+  "subject": "high-009",
+  "data": {
+   "rule": "R3",
+   "title": "Enough acid for the metals"
+  },
+  "where": "data/runs.csv:72"
+ },
+ {
+  "id": "R6.output-bounds",
+  "severity": "warning",
+  "message": "li_recovery_pct = 83.61 below the expected 85",
+  "file": "data/runs.csv",
+  "line": 73,
+  "fix": "check the assay or the conditions",
+  "subject": "high-010",
+  "data": {
+   "rule": "R6",
+   "title": "Outputs plausible"
+  },
+  "where": "data/runs.csv:73"
+ },
+ {
+  "id": "R6.output-bounds",
+  "severity": "warning",
+  "message": "li_recovery_pct = 82.21 below the expected 85",
+  "file": "data/runs.csv",
+  "line": 74,
+  "fix": "check the assay or the conditions",
+  "subject": "high-011",
+  "data": {
+   "rule": "R6",
+   "title": "Outputs plausible"
+  },
+  "where": "data/runs.csv:74"
+ },
+ {
+  "id": "R6.output-bounds",
+  "severity": "warning",
+  "message": "li_recovery_pct = 68.78 below the expected 85",
+  "file": "data/runs.csv",
+  "line": 81,
+  "fix": "check the assay or the conditions",
+  "subject": "high-018",
+  "data": {
+   "rule": "R6",
+   "title": "Outputs plausible"
+  },
+  "where": "data/runs.csv:81"
+ },
+ {
+  "id": "R6.output-bounds",
+  "severity": "warning",
+  "message": "li_recovery_pct = 63.05 below the expected 85",
+  "file": "data/runs.csv",
+  "line": 86,
+  "fix": "check the assay or the conditions",
+  "subject": "high-023",
+  "data": {
+   "rule": "R6",
+   "title": "Outputs plausible"
+  },
+  "where": "data/runs.csv:86"
+ },
+ {
+  "id": "R6.output-bounds",
+  "severity": "warning",
+  "message": "li_recovery_pct = 80.97 below the expected 85",
+  "file": "data/runs.csv",
+  "line": 88,
+  "fix": "check the assay or the conditions",
+  "subject": "high-025",
+  "data": {
+   "rule": "R6",
+   "title": "Outputs plausible"
+  },
+  "where": "data/runs.csv:88"
+ },
+ {
+  "id": "R6.output-bounds",
+  "severity": "warning",
+  "message": "li_recovery_pct = 67.81 below the expected 85",
+  "file": "data/runs.csv",
+  "line": 93,
+  "fix": "check the assay or the conditions",
+  "subject": "high-030",
+  "data": {
+   "rule": "R6",
+   "title": "Outputs plausible"
+  },
+  "where": "data/runs.csv:93"
+ },
+ {
+  "id": "type.draft",
+  "severity": "warning",
+  "message": "process type is a draft: results cannot be rated above tier D",
+  "file": "library/bml-v1.yaml",
+  "line": 11,
+  "fix": "ask the named owners to review and record it under reviews:",
+  "subject": null,
+  "data": {},
+  "where": "library/bml-v1.yaml:11"
+ },
+ {
+  "id": "data.synthetic",
+  "severity": "warning",
+  "message": "the run data is synthetic: results are a demonstration and cannot be exported outside demo mode",
+  "file": "prism.yaml",
+  "line": 8,
+  "fix": null,
+  "subject": null,
+  "data": {},
+  "where": "prism.yaml:8"
+ },
+ {
+  "id": "scope.not-agreed",
+  "severity": "warning",
+  "message": "functional unit and boundary not yet agreed by the LCA practitioner",
+  "file": "scope.yaml",
+  "line": 8,
+  "fix": "add agreed_by: {name: ..., date: ...}",
+  "subject": null,
+  "data": {},
+  "where": "scope.yaml:8"
+ },
+ {
+  "id": "R2.operating-window",
+  "severity": "info",
+  "message": "(excluded: temperature logged as 95 degC) temperature_c = 95 degC is outside the window 40 to 90",
+  "file": "data/runs.csv",
+  "line": 63,
+  "fix": "correct the value, or widen the window in a reviewed process type",
+  "subject": "mid-031",
+  "data": {
+   "rule": "R2",
+   "title": "Inside the operating window"
+  },
+  "where": "data/runs.csv:63"
+ },
+ {
+  "id": "R6.output-bounds",
+  "severity": "info",
+  "message": "(excluded: temperature logged as 95 degC) li_recovery_pct = 80.67 below the expected 85",
+  "file": "data/runs.csv",
+  "line": 63,
+  "fix": "check the assay or the conditions",
+  "subject": "mid-031",
+  "data": {
+   "rule": "R6",
+   "title": "Outputs plausible"
+  },
+  "where": "data/runs.csv:63"
+ },
+ {
+  "id": "R7.element-balance",
+  "severity": "info",
+  "message": "(excluded: nickel balance off by 19%; liquor assay suspected) Ni balance off by 19.2% (in 0.2400, out 0.2860 kg/kg)",
+  "file": "data/runs.csv",
+  "line": 94,
+  "fix": "check the liquor volume and assays for this run",
+  "subject": "high-031",
+  "data": {
+   "rule": "R7",
+   "title": "Element balance closes"
+  },
+  "where": "data/runs.csv:94"
+ },
+ {
+  "id": "data.excluded",
+  "severity": "info",
+  "message": "2 run(s) excluded from the model: mid-031, high-031",
+  "file": "prism.yaml",
+  "line": 10,
+  "fix": null,
+  "subject": null,
+  "data": {},
+  "where": "prism.yaml:10"
+ }
+]

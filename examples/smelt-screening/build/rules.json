@@ -1,0 +1,38 @@
+[
+ {
+  "id": "R1",
+  "title": "Composition adds up",
+  "check": "composition_closure",
+  "counts": {
+   "pass": 8,
+   "warning": 0,
+   "error": 0,
+   "skipped": 0
+  },
+  "status": "pass"
+ },
+ {
+  "id": "R2",
+  "title": "Inside the operating window",
+  "check": "operating_window",
+  "counts": {
+   "pass": 8,
+   "warning": 0,
+   "error": 0,
+   "skipped": 0
+  },
+  "status": "pass"
+ },
+ {
+  "id": "R6",
+  "title": "Outputs plausible",
+  "check": "output_bounds",
+  "counts": {
+   "pass": 8,
+   "warning": 0,
+   "error": 0,
+   "skipped": 0
+  },
+  "status": "pass"
+ }
+]

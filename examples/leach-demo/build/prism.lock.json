@@ -1,0 +1,13 @@
+{
+ "prism_version": "0.1.0",
+ "built_at": "2026-11-06T13:43:23+00:00",
+ "demo": true,
+ "inputs": {
+  "prism.yaml": "317315423f5473e4ec2019a53ead4832f6006d74fe2087d68b4845fad9f94293",
+  "scope.yaml": "f3ad376c09bfe7f979af58992b418169771e2813a5bc892d64abe6a94fbec74f",
+  "feedstocks.yaml": "d968e5d49aed1a590ab96fcfecc575c1a5e3779d4998e5e4b494b5ed83e5c51c",
+  "signoffs.yaml": "858dd9dfa3940aa535c604cd22227c633fa1d247b7d51126aee7ee86c2b26c13",
+  "library/bml-v1.yaml": "88f3a3d2727a1956ae9a2d07b5c96477643aedeec68b9679ad41cae045412222",
+  "data/runs.csv": "c209815603cf410f808e646283271889f2f8157fae4ded46818c4dd765a8633a"
+ }
+}

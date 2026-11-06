@@ -1,0 +1,3 @@
+grades:
+  mid: {ni_pct: 18, co_pct: 6, cu_pct: 2, li_pct: 3.5, graphite_pct: 35}
+operating_point: {temperature_c: 1500, flux_kg_per_kg: 0.4, electricity_kwh_per_kg: 1.2}

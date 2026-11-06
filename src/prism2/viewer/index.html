@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>PRISM · XYCLE</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header class="nav">
+  <a class="brand" href="#/"><img src="x-mark-white.png" alt="" width="22" height="22"><span class="wordmark">XYCLE</span><span class="module">PRISM</span></a>
+  <nav id="mainnav">
+    <a href="#/" data-nav="projects">Projects</a>
+    <a href="#/library" data-nav="library">Process library</a>
+  </nav>
+  <div class="spacer"></div>
+  <label class="mode" title="Advanced shows every rule result, statistics and formulas">
+    <span>Beginner</span><input type="checkbox" id="advanced"><span class="switch"></span><span>Advanced</span>
+  </label>
+</header>
+<div class="crumbs" id="crumbs"></div>
+<main id="app"><div class="loading">Loading…</div></main>
+<footer id="footer"></footer>
+<div id="tip" class="tip" hidden></div>
+<script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,50 @@
+# PLACEHOLDER process type: proves a second route needs configuration, not code.
+# Every range and coefficient is unreviewed (docs/ASSUMPTIONS.md A-12). Do not use for claims.
+schema: prism2/process-type/v1
+id: pyro-smelt-v1
+version: 0.1.0
+title: Black mass smelting (pyrometallurgy) - placeholder
+route_family: pyrometallurgy
+wp: WP3 T3.1
+status: draft
+placeholder: true
+owners: {process_data: Irdanto S. L., thermodynamics: Sahin A.}
+reviews: []
+functional_unit: {amount: 1, unit: kg, of: dry black mass fed to the furnace}
+boundary: gate-to-gate, smelting furnace and off-gas cooling; alloy refining outside
+fields:
+  ni_pct: {group: composition, label: Nickel, unit: wt%, min: 0, max: 100, required: true, element: Ni}
+  co_pct: {group: composition, label: Cobalt, unit: wt%, min: 0, max: 100, required: true, element: Co}
+  cu_pct: {group: composition, label: Copper, unit: wt%, min: 0, max: 100, default: 2, element: Cu}
+  li_pct: {group: composition, label: Lithium, unit: wt%, min: 0, max: 100, required: true, element: Li}
+  graphite_pct: {group: composition, label: Graphite, unit: wt%, min: 0, max: 100, default: 35}
+  temperature_c: {group: conditions, label: Bath temperature, unit: degC, min: 1350, max: 1650, required: true}
+  flux_kg_per_kg: {group: conditions, label: Slag flux addition, unit: kg/kg, min: 0.1, max: 1.0, default: 0.4}
+  electricity_kwh_per_kg: {group: conditions, label: Furnace electricity, unit: kWh/kg, min: 0.5, max: 3, default: 1.2}
+outputs:
+  ni_recovery_pct: {label: Ni to alloy, unit: '%', min: 0, max: 100, element: Ni}
+  co_recovery_pct: {label: Co to alloy, unit: '%', min: 0, max: 100, element: Co}
+  li_to_slag_pct: {label: Li to slag, unit: '%', min: 0, max: 100, element: Li}
+rules:
+  - {id: R1, check: composition_closure, title: Composition adds up, params: {max_sum_pct: 100.5}}
+  - {id: R2, check: operating_window, title: Inside the operating window, params: {fields: [temperature_c, flux_kg_per_kg, electricity_kwh_per_kg]}}
+  - {id: R6, check: output_bounds, title: Outputs plausible, params: {}}
+constants:
+  co2_per_c: {value: 3.664, provenance: given, source: stoichiometry CO2/C}
+  carbon_oxidised_fraction: {value: 0.95, provenance: assumed, source: A-12}
+derived:
+  alloy_kg: (ni_pct * ni_recovery_pct + co_pct * co_recovery_pct + cu_pct * 95) / 10000
+  li_slag_kg: li_pct / 100 * li_to_slag_pct / 100
+  slag_kg: 1 + flux_kg_per_kg - alloy_kg - graphite_pct / 100
+  co2_kg: graphite_pct / 100 * carbon_oxidised_fraction * co2_per_c
+exchanges:
+  - {key: black_mass, name: Black mass (dry), category: Product, flow: reference, unit: kg, formula: '1'}
+  - {key: flux, name: Slag flux (limestone and silica), category: Material Input, unit: kg, formula: flux_kg_per_kg, assumption: A-12}
+  - {key: electricity, name: Electricity, category: Energy Input, unit: kWh, formula: electricity_kwh_per_kg, assumption: A-12}
+  - {key: alloy, name: Ni-Co-Cu alloy, category: Co-product, unit: kg, formula: alloy_kg}
+  - {key: li_slag, name: Lithium reporting to slag, category: Co-product, unit: kg, formula: li_slag_kg}
+  - {key: slag, name: Slag, category: Waste, unit: kg, formula: slag_kg, assumption: A-12}
+  - {key: co2, name: Carbon dioxide (graphite oxidation), category: Emission to Air, unit: kg, formula: co2_kg, assumption: A-12}
+examples:
+  default_point: {ni_pct: 18, co_pct: 6, cu_pct: 2, li_pct: 3.5, graphite_pct: 35, temperature_c: 1500,
+                  flux_kg_per_kg: 0.4, electricity_kwh_per_kg: 1.2, ni_recovery_pct: 97, co_recovery_pct: 95, li_to_slag_pct: 98}

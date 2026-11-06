@@ -1,0 +1,33 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "prism2"
+version = "0.1.0"
+description = "PRISM2: life cycle inventory as code. Simulation and plant data in, checked, parameterised, certified LCI out, ready for XYCLE."
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+  "numpy>=1.26",
+  "scipy>=1.11",
+  "PyYAML>=6.0",
+  "openpyxl>=3.1",
+  "click>=8.1",
+]
+
+[project.optional-dependencies]
+serve = ["fastapi>=0.110", "uvicorn>=0.29"]
+dev = ["pytest>=8", "httpx>=0.27", "fastapi>=0.110", "uvicorn>=0.29"]
+
+[project.scripts]
+prism = "prism2.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+prism2 = ["library/*.yaml", "viewer/*", "templates/**/*", "templates/project/.gitignore", "skills/**/*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

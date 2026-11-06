@@ -1,0 +1,8 @@
+# Feedstock grades (wt% of dry black mass) and the operating point for the inventory.
+# Illustrative grades for the synthetic example; replace with assayed feedstocks.
+grades:
+  low:  {ni_pct: 12, co_pct: 3, li_pct: 2.5, mn_pct: 4, al_pct: 3, cu_pct: 2, graphite_pct: 40}
+  mid:  {ni_pct: 18, co_pct: 6, li_pct: 3.5, mn_pct: 6, al_pct: 2, cu_pct: 1.5, graphite_pct: 35}
+  high: {ni_pct: 24, co_pct: 8, li_pct: 4.5, mn_pct: 8, al_pct: 1, cu_pct: 1, graphite_pct: 30}
+operating_point: {temperature_c: 65, h2so4_molarity: 2.0, residence_time_min: 120, h2o2_vol_pct: 2, pulp_density_g_l: 100}
+uncertainty: {composition_rel_sd: 0.05, conditions_rel_sd: 0.02}

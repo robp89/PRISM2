@@ -1,0 +1,203 @@
+{
+ "functional_unit": {
+  "amount": 1,
+  "unit": "kg",
+  "of": "dry black mass fed to the furnace"
+ },
+ "grades": {
+  "mid": {
+   "inputs": {
+    "co_pct": 6.0,
+    "co_recovery_pct": 93.8,
+    "cu_pct": 2.0,
+    "electricity_kwh_per_kg": 1.2,
+    "flux_kg_per_kg": 0.4,
+    "graphite_pct": 35.0,
+    "li_pct": 3.5,
+    "li_to_slag_pct": 96.8,
+    "ni_pct": 18.0,
+    "ni_recovery_pct": 96.3625,
+    "temperature_c": 1500.0
+   },
+   "exchanges": {
+    "black_mass": {
+     "value": 1.0,
+     "p5": 1.0,
+     "p50": 1.0,
+     "p95": 1.0,
+     "driver": null,
+     "driver_rho": 0.0
+    },
+    "flux": {
+     "value": 0.4,
+     "p5": 0.38655733383549673,
+     "p50": 0.4003928999377806,
+     "p95": 0.41384187514701865,
+     "driver": "flux_kg_per_kg",
+     "driver_rho": 1.0
+    },
+    "electricity": {
+     "value": 1.2,
+     "p5": 1.1628020795724208,
+     "p50": 1.201023239881731,
+     "p95": 1.23693846601236,
+     "driver": "electricity_kwh_per_kg",
+     "driver_rho": 1.0
+    },
+    "alloy": {
+     "value": 0.2487325,
+     "p5": 0.2335208666442944,
+     "p50": 0.24868532160008722,
+     "p95": 0.26428977512515195,
+     "driver": "ni_pct",
+     "driver_rho": 0.9411263691263692
+    },
+    "li_slag": {
+     "value": 0.03388,
+     "p5": 0.031038420353849464,
+     "p50": 0.03391932774810783,
+     "p95": 0.036668716681489334,
+     "driver": "li_pct",
+     "driver_rho": 1.0
+    },
+    "slag": {
+     "value": 0.8012674999999999,
+     "p5": 0.7660570414882372,
+     "p50": 0.8000018307603403,
+     "p95": 0.8361473004268078,
+     "driver": "graphite_pct",
+     "driver_rho": -0.7884080724080724
+    },
+    "co2": {
+     "value": 1.2182799999999998,
+     "p5": 1.1251030353884295,
+     "p50": 1.2252059420933654,
+     "p95": 1.320385647236175,
+     "driver": "graphite_pct",
+     "driver_rho": 1.0
+    }
+   },
+   "warnings": [
+    "no fitted model: outputs are the mean of the runs (quick look)"
+   ]
+  }
+ },
+ "warnings": [
+  "mid: no fitted model: outputs are the mean of the runs (quick look)"
+ ],
+ "exchanges": [
+  {
+   "key": "black_mass",
+   "name": "Black mass (dry)",
+   "category": "Product",
+   "unit": "kg",
+   "assumption": null,
+   "flow": "reference",
+   "note": null
+  },
+  {
+   "key": "flux",
+   "name": "Slag flux (limestone and silica)",
+   "category": "Material Input",
+   "unit": "kg",
+   "assumption": "A-12",
+   "flow": null,
+   "note": null
+  },
+  {
+   "key": "electricity",
+   "name": "Electricity",
+   "category": "Energy Input",
+   "unit": "kWh",
+   "assumption": "A-12",
+   "flow": null,
+   "note": null
+  },
+  {
+   "key": "alloy",
+   "name": "Ni-Co-Cu alloy",
+   "category": "Co-product",
+   "unit": "kg",
+   "assumption": null,
+   "flow": null,
+   "note": null
+  },
+  {
+   "key": "li_slag",
+   "name": "Lithium reporting to slag",
+   "category": "Co-product",
+   "unit": "kg",
+   "assumption": null,
+   "flow": null,
+   "note": null
+  },
+  {
+   "key": "slag",
+   "name": "Slag",
+   "category": "Waste",
+   "unit": "kg",
+   "assumption": "A-12",
+   "flow": null,
+   "note": null
+  },
+  {
+   "key": "co2",
+   "name": "Carbon dioxide (graphite oxidation)",
+   "category": "Emission to Air",
+   "unit": "kg",
+   "assumption": "A-12",
+   "flow": null,
+   "note": null
+  }
+ ],
+ "uncertainty": {
+  "composition_rel_sd": 0.05,
+  "conditions_rel_sd": 0.02
+ },
+ "n_mc": 1000,
+ "basis": "runs-mean",
+ "envelope": {
+  "black_mass": {
+   "min": 1.0,
+   "max": 1.0,
+   "p5": 1.0,
+   "p95": 1.0
+  },
+  "flux": {
+   "min": 0.4,
+   "max": 0.4,
+   "p5": 0.38655733383549673,
+   "p95": 0.41384187514701865
+  },
+  "electricity": {
+   "min": 1.2,
+   "max": 1.2,
+   "p5": 1.1628020795724208,
+   "p95": 1.23693846601236
+  },
+  "alloy": {
+   "min": 0.2487325,
+   "max": 0.2487325,
+   "p5": 0.2335208666442944,
+   "p95": 0.26428977512515195
+  },
+  "li_slag": {
+   "min": 0.03388,
+   "max": 0.03388,
+   "p5": 0.031038420353849464,
+   "p95": 0.036668716681489334
+  },
+  "slag": {
+   "min": 0.8012674999999999,
+   "max": 0.8012674999999999,
+   "p5": 0.7660570414882372,
+   "p95": 0.8361473004268078
+  },
+  "co2": {
+   "min": 1.2182799999999998,
+   "max": 1.2182799999999998,
+   "p5": 1.1251030353884295,
+   "p95": 1.320385647236175
+  }
+ }
+}

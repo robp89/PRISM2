@@ -1,0 +1,43 @@
+{
+ "fields": {
+  "temperature_c": {
+   "filled": 4,
+   "bins": 4,
+   "share": 1.0,
+   "observed": [
+    1400.0,
+    1600.0
+   ]
+  },
+  "flux_kg_per_kg": {
+   "filled": 1,
+   "bins": 4,
+   "share": 0.25,
+   "observed": [
+    0.4,
+    0.4
+   ]
+  },
+  "electricity_kwh_per_kg": {
+   "filled": 2,
+   "bins": 4,
+   "share": 0.5,
+   "observed": [
+    1.0,
+    1.4
+   ]
+  }
+ },
+ "grades": {
+  "mid": 0
+ },
+ "share": 0.5833333333333334,
+ "gaps": [
+  "flux_kg_per_kg",
+  "electricity_kwh_per_kg"
+ ],
+ "missing_grades": [
+  "mid"
+ ],
+ "complete": false
+}

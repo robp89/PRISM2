@@ -1,0 +1,8 @@
+# The scope card. Agree it with the LCA practitioner before building.
+goal: null
+functional_unit: {{functional_unit}}
+boundary: gate-to-gate
+intended_use: screening     # screening | internal_decision | customer_report | regulatory_input
+target_tier: C
+lca_practitioner: null
+agreed_by: null             # {name: ..., date: YYYY-MM-DD}

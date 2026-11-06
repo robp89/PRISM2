@@ -1,0 +1,26 @@
+{
+ "level": "Screening only",
+ "headline": "8 runs is a quick look, not a model",
+ "next_action": "add runs",
+ "questions": [
+  {
+   "q": "Is the data usable?",
+   "a": "caveats",
+   "why": "8 runs read; 2 warning(s)",
+   "fix": null
+  },
+  {
+   "q": "Does it cover the operating range?",
+   "a": "caveats",
+   "why": "58% of the window covered; gaps in flux_kg_per_kg, electricity_kwh_per_kg; no runs for grade mid",
+   "fix": "generate a run sheet with `prism design`"
+  },
+  {
+   "q": "Is the fitted model accurate?",
+   "a": "unknown",
+   "why": "no model built",
+   "fix": "run `prism build`"
+  }
+ ],
+ "tier": "D"
+}

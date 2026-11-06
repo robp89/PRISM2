@@ -1,0 +1,8 @@
+# The scope card (journey stage 1). It travels with every output.
+goal: Demonstrate how a leach inventory responds to feedstock grade and operating conditions
+functional_unit: 1 kg dry black mass fed to the leach
+boundary: gate-to-gate (leach and solid-liquid separation)
+intended_use: screening
+target_tier: B
+lca_practitioner: Costanza T.
+agreed_by: null

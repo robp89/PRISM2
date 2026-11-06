@@ -1,0 +1,61 @@
+{
+ "fields": {
+  "temperature_c": {
+   "filled": 4,
+   "bins": 4,
+   "share": 1.0,
+   "observed": [
+    45.13,
+    95.0
+   ]
+  },
+  "h2so4_molarity": {
+   "filled": 2,
+   "bins": 4,
+   "share": 0.5,
+   "observed": [
+    1.41,
+    2.39
+   ]
+  },
+  "residence_time_min": {
+   "filled": 4,
+   "bins": 4,
+   "share": 1.0,
+   "observed": [
+    46.83,
+    199.37
+   ]
+  },
+  "h2o2_vol_pct": {
+   "filled": 4,
+   "bins": 4,
+   "share": 1.0,
+   "observed": [
+    0.52,
+    3.98
+   ]
+  },
+  "pulp_density_g_l": {
+   "filled": 2,
+   "bins": 4,
+   "share": 0.5,
+   "observed": [
+    85.32,
+    114.38
+   ]
+  }
+ },
+ "grades": {
+  "low": 31,
+  "mid": 31,
+  "high": 31
+ },
+ "share": 0.8,
+ "gaps": [
+  "h2so4_molarity",
+  "pulp_density_g_l"
+ ],
+ "missing_grades": [],
+ "complete": false
+}

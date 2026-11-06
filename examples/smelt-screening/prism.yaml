@@ -1,0 +1,9 @@
+schema: prism2/project/v1
+id: smelt-screening
+title: Black mass smelting, screening from eight literature-style points
+process_type: pyro-smelt-v1
+data:
+  runs: data/runs.csv
+  origin: literature
+model:
+  targets: [ni_recovery_pct, co_recovery_pct, li_to_slag_pct]

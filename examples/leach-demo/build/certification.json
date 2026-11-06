@@ -1,0 +1,157 @@
+{
+ "tier": "D",
+ "tier_text": "Screening only: draft process type, too few runs, or the model failed its gate",
+ "reasons": [
+  "process type bml-v1 is a draft"
+ ],
+ "raise_by": [
+  "have the process type reviewed by its named owners"
+ ],
+ "gate": {
+  "passed": true,
+  "targets": {
+   "ni_recovery_pct": {
+    "family": "gp",
+    "checks": [
+     {
+      "id": "min_holdout_runs",
+      "label": "Held-out runs",
+      "value": 18,
+      "limit": 8,
+      "pass": true
+     },
+     {
+      "id": "min_r2",
+      "label": "Held-out R\u00b2",
+      "value": 0.9910430289761589,
+      "limit": 0.92,
+      "pass": true
+     },
+     {
+      "id": "max_p90_rel_err_pct",
+      "label": "90th percentile relative error %",
+      "value": 2.3593506127694215,
+      "limit": 10,
+      "pass": true
+     },
+     {
+      "id": "min_normality_p",
+      "label": "Residual normality p",
+      "value": 0.6298462977681778,
+      "limit": 0.05,
+      "pass": true
+     }
+    ],
+    "passed": true
+   },
+   "co_recovery_pct": {
+    "family": "gp",
+    "checks": [
+     {
+      "id": "min_holdout_runs",
+      "label": "Held-out runs",
+      "value": 18,
+      "limit": 8,
+      "pass": true
+     },
+     {
+      "id": "min_r2",
+      "label": "Held-out R\u00b2",
+      "value": 0.9936173276594695,
+      "limit": 0.92,
+      "pass": true
+     },
+     {
+      "id": "max_p90_rel_err_pct",
+      "label": "90th percentile relative error %",
+      "value": 1.998265002096291,
+      "limit": 10,
+      "pass": true
+     },
+     {
+      "id": "min_normality_p",
+      "label": "Residual normality p",
+      "value": 0.6625552053460161,
+      "limit": 0.05,
+      "pass": true
+     }
+    ],
+    "passed": true
+   },
+   "li_recovery_pct": {
+    "family": "gp",
+    "checks": [
+     {
+      "id": "min_holdout_runs",
+      "label": "Held-out runs",
+      "value": 18,
+      "limit": 8,
+      "pass": true
+     },
+     {
+      "id": "min_r2",
+      "label": "Held-out R\u00b2",
+      "value": 0.9974334882391124,
+      "limit": 0.92,
+      "pass": true
+     },
+     {
+      "id": "max_p90_rel_err_pct",
+      "label": "90th percentile relative error %",
+      "value": 1.4829615909850293,
+      "limit": 10,
+      "pass": true
+     },
+     {
+      "id": "min_normality_p",
+      "label": "Residual normality p",
+      "value": 0.18628193230156587,
+      "limit": 0.05,
+      "pass": true
+     }
+    ],
+    "passed": true
+   },
+   "mn_recovery_pct": {
+    "family": "gp",
+    "checks": [
+     {
+      "id": "min_holdout_runs",
+      "label": "Held-out runs",
+      "value": 18,
+      "limit": 8,
+      "pass": true
+     },
+     {
+      "id": "min_r2",
+      "label": "Held-out R\u00b2",
+      "value": 0.996722650315936,
+      "limit": 0.92,
+      "pass": true
+     },
+     {
+      "id": "max_p90_rel_err_pct",
+      "label": "90th percentile relative error %",
+      "value": 1.3632382511976484,
+      "limit": 10,
+      "pass": true
+     },
+     {
+      "id": "min_normality_p",
+      "label": "Residual normality p",
+      "value": 0.8912435810753931,
+      "limit": 0.05,
+      "pass": true
+     }
+    ],
+    "passed": true
+   }
+  }
+ },
+ "blockers": [],
+ "certified": true,
+ "demo": true,
+ "watermark": true,
+ "signoffs": [],
+ "target_tier": "B"
+}

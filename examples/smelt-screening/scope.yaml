@@ -1,0 +1,7 @@
+goal: Screening estimate of furnace inputs for a pyrometallurgical route
+functional_unit: 1 kg dry black mass fed to the furnace
+boundary: gate-to-gate (smelting furnace)
+intended_use: screening
+target_tier: D
+lca_practitioner: Costanza T.
+agreed_by: null

@@ -1,0 +1,4 @@
+# Feedstock grades (wt% of dry feed) and the operating point at which the inventory is generated.
+grades: {}
+operating_point: {}
+uncertainty: {composition_rel_sd: 0.05, conditions_rel_sd: 0.02}

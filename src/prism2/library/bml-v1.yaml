@@ -1,0 +1,115 @@
+# PRISM2 process type. Schema prism2/process-type/v1 (docs/FILE-FORMATS.md).
+# Carried over from the PRISM platform's bml-v1 (Spec 2). Ranges, defaults and recipe
+# coefficients are engineering assumptions (docs/ASSUMPTIONS.md A-01 to A-11) awaiting
+# review by Irdanto S. L. (process data) and Sahin A. (thermodynamics).
+schema: prism2/process-type/v1
+id: bml-v1
+version: 1.1.0
+title: Black mass leach (hydrometallurgy)
+route_family: hydrometallurgy
+wp: WP3 T3.2
+status: draft
+owners: {process_data: Irdanto S. L., thermodynamics: Sahin A.}
+reviews: []
+functional_unit: {amount: 1, unit: kg, of: dry black mass fed to the leach}
+boundary: gate-to-gate, leach and solid-liquid separation; purification, precipitation and residue treatment outside
+sources:
+  - Spec 2 - Data formats and sample data (PRISM product specification)
+  - User Journey worked example (leach default point)
+
+fields:
+  ni_pct: {group: composition, label: Nickel, unit: wt%, min: 0, max: 100, required: true, element: Ni}
+  co_pct: {group: composition, label: Cobalt, unit: wt%, min: 0, max: 100, required: true, element: Co}
+  li_pct: {group: composition, label: Lithium, unit: wt%, min: 0, max: 100, required: true, element: Li}
+  mn_pct: {group: composition, label: Manganese, unit: wt%, min: 0, max: 100, required: true, element: Mn}
+  al_pct: {group: composition, label: Aluminium, unit: wt%, min: 0, max: 100, default: 0, element: Al}
+  cu_pct: {group: composition, label: Copper, unit: wt%, min: 0, max: 100, default: 0, element: Cu}
+  graphite_pct: {group: composition, label: Graphite, unit: wt%, min: 0, max: 100, default: 0}
+  temperature_c: {group: conditions, label: Leach temperature, unit: degC, min: 40, max: 90, required: true}
+  h2so4_molarity: {group: conditions, label: Sulfuric acid concentration, unit: mol/L, min: 0.5, max: 5, required: true}
+  residence_time_min: {group: conditions, label: Residence time, unit: min, min: 30, max: 240, required: true}
+  h2o2_vol_pct: {group: conditions, label: Hydrogen peroxide dose, unit: vol%, min: 0, max: 5, default: 2}
+  pulp_density_g_l: {group: conditions, label: Pulp density, unit: g/L, min: 50, max: 200, default: 100}
+
+outputs:
+  ni_recovery_pct: {label: Ni leaching recovery, unit: '%', min: 0, max: 100, element: Ni}
+  co_recovery_pct: {label: Co leaching recovery, unit: '%', min: 0, max: 100, element: Co}
+  li_recovery_pct: {label: Li leaching recovery, unit: '%', min: 0, max: 100, element: Li}
+  mn_recovery_pct: {label: Mn leaching recovery, unit: '%', min: 0, max: 100, element: Mn}
+
+assays:
+  liquor_l_per_kg_bm: {unit: L/kg}
+  liquor_ni_g_l: {unit: g/L, element: Ni}
+  liquor_co_g_l: {unit: g/L, element: Co}
+  liquor_li_g_l: {unit: g/L, element: Li}
+  liquor_mn_g_l: {unit: g/L, element: Mn}
+  residue_kg_per_kg_bm: {unit: kg/kg}
+  residue_ni_pct: {unit: wt%, element: Ni}
+  residue_co_pct: {unit: wt%, element: Co}
+  residue_li_pct: {unit: wt%, element: Li}
+  residue_mn_pct: {unit: wt%, element: Mn}
+
+rules:
+  - {id: R1, check: composition_closure, title: Composition adds up, params: {max_sum_pct: 100.5}}
+  - {id: R2, check: operating_window, title: Inside the operating window, params: {fields: [temperature_c, h2so4_molarity, residence_time_min]}}
+  - id: R3
+    check: acid_stoichiometry
+    title: Enough acid for the metals
+    params:
+      acid_molarity_field: h2so4_molarity
+      pulp_density_field: pulp_density_g_l
+      # mol H2SO4 per mol metal dissolved as sulfate (Li2SO4 -> 0.5)
+      acid_per_mol: {Ni: 1, Co: 1, Mn: 1, Li: 0.5, Al: 1.5, Cu: 1}
+      ratio_warn_g_per_g: [1.2, 2.5]
+  - {id: R4, check: operating_window, title: Reductant dose in range, params: {fields: [h2o2_vol_pct]}}
+  - {id: R5, check: operating_window, title: Pulp density in range, params: {fields: [pulp_density_g_l]}}
+  - {id: R6, check: output_bounds, title: Outputs plausible, params: {warn_below: {li_recovery_pct: 85}}}
+  - id: R7
+    check: element_balance
+    title: Element balance closes
+    params:
+      tolerance_pct: 5
+      elements: {Ni: [ni_pct, liquor_ni_g_l, residue_ni_pct], Co: [co_pct, liquor_co_g_l, residue_co_pct],
+                 Li: [li_pct, liquor_li_g_l, residue_li_pct], Mn: [mn_pct, liquor_mn_g_l, residue_mn_pct]}
+
+constants:
+  h2so4_kg_per_mol: {value: 0.098072, provenance: given, source: molar mass}
+  h2o2_kg_per_mol: {value: 0.034014, provenance: given, source: molar mass}
+  o2_kg_per_mol: {value: 0.031998, provenance: given, source: molar mass}
+  h2o2_solution_kg_per_l: {value: 1.11, provenance: assumed, source: A-04 (30 wt% solution)}
+  h2o2_solution_strength: {value: 0.30, provenance: assumed, source: A-04}
+  cp_liquor_mj_per_kg_k: {value: 0.00418, provenance: assumed, source: A-05 (water)}
+  cp_solids_mj_per_kg_k: {value: 0.0009, provenance: assumed, source: A-05}
+  heat_efficiency: {value: 0.67, provenance: assumed, source: A-06 (sensible heat only)}
+  ambient_c: {value: 25, provenance: assumed, source: A-05}
+
+derived:
+  liquor_l: 1000 / pulp_density_g_l
+  acid_kg: h2so4_molarity * liquor_l * h2so4_kg_per_mol
+  h2o2_kg: h2o2_vol_pct / 100 * liquor_l * h2o2_solution_kg_per_l * h2o2_solution_strength
+  water_m3: liquor_l / 1000
+  heat_mj: (liquor_l * cp_liquor_mj_per_kg_k + cp_solids_mj_per_kg_k) * (temperature_c - ambient_c) / heat_efficiency
+  ni_leached_kg: ni_pct / 100 * ni_recovery_pct / 100
+  co_leached_kg: co_pct / 100 * co_recovery_pct / 100
+  li_leached_kg: li_pct / 100 * li_recovery_pct / 100
+  mn_leached_kg: mn_pct / 100 * mn_recovery_pct / 100
+  residue_kg: 1 - (ni_leached_kg + co_leached_kg + li_leached_kg + mn_leached_kg)
+  o2_kg: h2o2_kg / h2o2_kg_per_mol * 0.5 * o2_kg_per_mol
+
+exchanges:
+  - {key: black_mass, name: Black mass (dry), category: Product, flow: reference, unit: kg, formula: '1', note: functional unit (reference flow)}
+  - {key: h2so4, name: Sulfuric acid (100% basis), category: Material Input, unit: kg, formula: acid_kg, assumption: A-03}
+  - {key: h2o2, name: Hydrogen peroxide (100% basis), category: Material Input, unit: kg, formula: h2o2_kg, assumption: A-04}
+  - {key: water, name: Process water, category: Material Input, unit: m3, formula: water_m3, assumption: A-03}
+  - {key: heat, name: Process heat, category: Energy Input, unit: MJ, formula: heat_mj, assumption: A-05}
+  - {key: ni_liquor, name: Nickel to pregnant leach solution, category: Co-product, unit: kg, formula: ni_leached_kg}
+  - {key: co_liquor, name: Cobalt to pregnant leach solution, category: Co-product, unit: kg, formula: co_leached_kg}
+  - {key: li_liquor, name: Lithium to pregnant leach solution, category: Co-product, unit: kg, formula: li_leached_kg}
+  - {key: mn_liquor, name: Manganese to pregnant leach solution, category: Co-product, unit: kg, formula: mn_leached_kg}
+  - {key: residue, name: Leach residue (by difference), category: Waste, unit: kg, formula: residue_kg, assumption: A-07}
+  - {key: o2, name: Oxygen from peroxide decomposition (upper bound), category: Emission to Air, unit: kg, formula: o2_kg, assumption: A-04}
+
+examples:
+  default_point: {ni_pct: 18, co_pct: 6, li_pct: 3.5, mn_pct: 6, temperature_c: 65, h2so4_molarity: 1.5,
+                  residence_time_min: 90, h2o2_vol_pct: 2, pulp_density_g_l: 100,
+                  ni_recovery_pct: 96, co_recovery_pct: 95, li_recovery_pct: 90, mn_recovery_pct: 94}
